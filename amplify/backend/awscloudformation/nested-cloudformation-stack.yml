@@ -143,33 +143,6 @@
 				}
 			}
 		},
-		"analyticschatqldemopinpoint": {
-			"Type": "AWS::CloudFormation::Stack",
-			"Properties": {
-				"TemplateURL": "https://s3.amazonaws.com/chatql-react-demo-20181128125014-deployment/amplify-cfn-templates/analytics/pinpoint-cloudformation-template.json",
-				"Parameters": {
-					"appName": "chatqldemopinpoint",
-					"roleName": "pinpointLambdaRoleb618d5f3",
-					"cloudWatchPolicyName": "cloudWatchPolicyb618d5f3",
-					"pinpointPolicyName": "pinpointPolicyb618d5f3",
-					"authPolicyName": "pinpoint_amplify_b618d5f3",
-					"unauthPolicyName": "pinpoint_amplify_b618d5f3",
-					"authRoleName": {
-						"Ref": "AuthRoleName"
-					},
-					"unauthRoleName": {
-						"Ref": "UnauthRoleName"
-					},
-					"authRoleArn": {
-						"Fn::GetAtt": [
-							"AuthRole",
-							"Arn"
-						]
-					},
-					"env": "personal"
-				}
-			}
-		},
 		"apichatqldemo": {
 			"Type": "AWS::CloudFormation::Stack",
 			"Properties": {
